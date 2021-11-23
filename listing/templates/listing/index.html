@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'listing/css/style.css' %}">
+{% load static %}
+<script src="{% static 'listing/js/script.js' %}" defer></script>
+{% endblock head %}
+
+{% block body %}
+<div class="container">
+    <div class="left-half" id="id-left-half">
+        {% for movie in movieDetails %}
+
+        <div class="movie-box">
+            <button class="movie-fav" onclick="addToFavorites(this, this.parentElement)">&#9734;</button>
+            <img class="movie-image" src="{{ movie.imageURL }}" alt="{{ movie.title }}">
+            <p class="movie-year"><span>{{ movie.type }}</span> <span>{{ movie.year }}</span></p>
+            <h1 class="movie-title">{{ movie.title }}</h1>
+        </div>
+
+        {% endfor %}
+    </div>
+    <div class="right-half" id="id-right-half"></div>
+</div>
+
+{% endblock body %}
