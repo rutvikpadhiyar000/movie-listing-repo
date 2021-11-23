@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  background-color: #ddd;
+}
+.left-half {
+  width: 50%;
+  display: flex;
+  border-right: 4px solid gray;
+  flex-wrap: wrap;
+}
+
+.right-half {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-box {
+  width: 15em;
+  height: 29em;
+  background-color: #fff;
+  border-radius: 0.85em;
+  overflow: hidden;
+  margin: 1em auto;
+}
+
+.movie-fav {
+  position: absolute;
+  transform: translate(20%, 20%);
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.movie-image {
+  width: 100%;
+}
+
+.movie-year {
+  width: 100%;
+  text-align: center;
+  color: gray;
+}
+
+.movie-title {
+  font-size: 1em;
+  margin: 15px;
+}
